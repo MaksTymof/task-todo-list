@@ -1,18 +1,27 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
-    <ToDoList msg="Welcome to My ToDoList.js App"/>
+    <AddTodo :text="buttonText"/>
+    <TaskForm :task="textTask"/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import ToDoList from '@/components/ToDoList.vue'
+import AddTodo from '@/components/AddTodo.vue'
+import TaskForm from '@/components/TaskForm.vue'
 
 export default {
   name: 'Home',
   components: {
-    ToDoList
+    AddTodo,
+    TaskForm
+  },
+  data () {
+    return {
+      buttonText: 'Add Todo List',
+      textTask: 'Add Task'
+    }
   }
 }
 </script>

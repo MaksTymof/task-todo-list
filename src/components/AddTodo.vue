@@ -1,17 +1,14 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <form>
-      <input placeholder="Start typing here to create a task" name="taskcreate">
-    </form>
+     <button> {{ text }} </button>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'ToDoList',
+  name: 'AddTodo',
   props: {
-    msg: String
+    text: String
   }
 }
 </script>
