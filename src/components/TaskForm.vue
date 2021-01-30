@@ -1,15 +1,18 @@
 <template lang="html">
   <form>
-    <input placeholder="Enter task">
-    <button> {{ task }}</button>
+    <div class="plus-icon">
+    </div>
+    <input type="text">
+    <button>{{ buttonText }}</button>
   </form>
 </template>
 
 <script>
 export default {
-  name: 'TaskForm',
-  props: {
-    task: String
+  data () {
+    return {
+      buttonText: 'Add task'
+    }
   }
 }
 </script>

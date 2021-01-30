@@ -1,14 +1,22 @@
 <template>
-  <div class="hello">
-     <button> {{ text }} </button>
-  </div>
+  <p>
+  <button @click="showForm" class="addTodo">
+    {{text}}
+  </button>
+  </p>
 </template>
 
 <script>
 export default {
-  name: 'AddTodo',
+  name: 'HelloWorld',
   props: {
     text: String
+  },
+  methods: {
+    showForm () {
+      console.log('ok')
+      this.$store.dispatch('showForm')
+    }
   }
 }
 </script>
@@ -29,4 +37,5 @@ li {
 a {
   color: #42b983;
 }
+
 </style>
