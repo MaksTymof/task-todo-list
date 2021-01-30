@@ -1,21 +1,26 @@
 <template>
   <p>
-  <button @click="showForm" class="addTodo">
+  <button @click="addForm" class="addTodo">
     {{text}}
   </button>
   </p>
 </template>
 
 <script>
+
+import $ from 'jquery'
+
 export default {
   name: 'HelloWorld',
   props: {
     text: String
   },
   methods: {
-    showForm () {
-      console.log('ok')
-      this.$store.dispatch('showForm')
+    addForm () {
+      $('p').append(`<form>
+              <input type="text">
+              <button>Add Task</button>
+              </form>`)
     }
   }
 }

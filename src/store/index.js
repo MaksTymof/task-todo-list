@@ -8,13 +8,13 @@ export default new Vuex.Store({
     showTaskForm: false
   },
   mutations: {
-    SHOW_FORM (state) {
-      state.showTaskForm = true
+    ADD_FORM (state) {
+      state.addTaskForm = true
     }
   },
   actions: {
-    showForm ({ commit }) {
-      commit('SHOW_FORM')
+    addForm ({ commit }) {
+      commit('ADD_FORM')
     }
   },
   modules: {

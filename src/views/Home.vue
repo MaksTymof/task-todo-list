@@ -2,7 +2,7 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
     <AddTodo :text="buttonText"/>
-    <TaskForm v-show="showTaskForm" :task="textTask"/>
+    <TaskForm v-html="addTaskForm" :task="textTask"/>
   </div>
 </template>
 
@@ -12,6 +12,7 @@ import AddTodo from '@/components/AddTodo.vue'
 import TaskForm from '@/components/TaskForm.vue'
 
 import { mapState } from 'vuex'
+
 export default {
   name: 'Home',
   components: {
@@ -26,7 +27,7 @@ export default {
   },
   computed: {
     ...mapState([
-      'showTaskForm'
+      'addTaskForm'
     ])
   }
 }
