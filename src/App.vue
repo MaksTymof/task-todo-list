@@ -8,6 +8,12 @@
   </div>
 </template>
 
+<script>
+export default {
+  title: 'ToDo List'
+}
+</script>
+
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
