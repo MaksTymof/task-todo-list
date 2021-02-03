@@ -1,33 +1,30 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
+    <TasksList v-for="tasksList in tasksLists" :key="tasksList._id"/>
     <AddTodo :text="buttonText"/>
-    <TaskForm v-html="addTaskForm" :task="textTask"/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import AddTodo from '@/components/AddTodo.vue'
-import TaskForm from '@/components/TaskForm.vue'
-
+import TasksList from '@/components/TasksList.vue'
 import { mapState } from 'vuex'
-
 export default {
   name: 'Home',
   components: {
     AddTodo,
-    TaskForm
+    TasksList
   },
   data () {
     return {
-      buttonText: 'Add Todo List',
-      textTask: 'Add Task'
+      buttonText: 'Add TODO List'
     }
   },
   computed: {
     ...mapState([
-      'addTaskForm'
+      'tasksLists'
     ])
   }
 }

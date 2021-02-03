@@ -1,6 +1,6 @@
 <template>
   <p>
-  <button @click="addForm" class="addTodo">
+  <button @click="addNewTasksList" class="addTodo">
     {{text}}
   </button>
   </p>
@@ -8,19 +8,19 @@
 
 <script>
 
-import $ from 'jquery'
-
 export default {
-  name: 'HelloWorld',
+
+  name: 'addTodoButton',
   props: {
     text: String
   },
   methods: {
-    addForm () {
-      $('p').append(`<form>
-              <input type="text">
-              <button>Add Task</button>
-              </form>`)
+    addNewTasksList () {
+      const taskList = {
+        title: 'New tasks list',
+        _id: Math.random(1000)
+      }
+      this.$store.dispatch('addNewTasksList', taskList)
     }
   }
 }
