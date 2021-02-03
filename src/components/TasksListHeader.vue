@@ -14,8 +14,6 @@ export default {
 </script>
 
   <style lang="sass" scoped>
-  $blueLight: #39B7CD
-  $blueDark: #53868B
   .tasks--options
     opacity: 0
     .tasks--header:hover &
@@ -25,8 +23,6 @@ export default {
     display: flex
     justify-content: space-between
     border-radius: 2px
-    border: 1px solid $blueDark
-    box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, .8)
     padding: 10px 15px
     background-image: linear-gradient(to bottom, #323777, #404b8c, #4f5fa1, #5f74b6, #6f8acb, #6d9cdb, #6aadeb, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1)
     color: #fff
