@@ -29,3 +29,11 @@ export default {
   }
 }
 </script>
+<style lang="scss" scoped>
+  img {
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 250px;
+    height: 250px;
+  }
+</style>

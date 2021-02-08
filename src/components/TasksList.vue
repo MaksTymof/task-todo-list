@@ -4,6 +4,8 @@
     <TaskForm />
     <div class="tasks--list">
       <Task />
+      <Task />
+      <Task />
     </div>
   </div>
 </template>
@@ -23,4 +25,10 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.tasks {
+  margin-top: 15px;
+}
+.tasks--list .task:last-child {
+  border-radius: 0px 0px 7px 7px;
+}
 </style>
