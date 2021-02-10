@@ -30,8 +30,8 @@ export default {
     justify-content: space-between
     border-radius: 7px 7px 0px 0px
     padding: 10px 15px
-    background-image: linear-gradient(to bottom, #323777, #404b8c, #4f5fa1, #5f74b6, #6f8acb, #6d9cdb, #6aadeb, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1)
-    color: #fff
+    background: #126311
+    color:#ced426
     & > div
       display: flex
       justify-content: space-between

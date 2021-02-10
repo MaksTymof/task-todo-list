@@ -28,7 +28,4 @@ export default {
 .tasks {
   margin-top: 15px;
 }
-.tasks--list .task:last-child {
-  border-radius: 0px 0px 7px 7px;
-}
 </style>

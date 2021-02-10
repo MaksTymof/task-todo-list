@@ -22,7 +22,10 @@ export default {
     margin: 0;
 }
 html {
-  background: url('../public/thr3-eyes-MlpyeuKs8GY-unsplash.jpeg') no-repeat center center fixed;
+  background: #9EC56F;
+  background: -webkit-linear-gradient(bottom right, #9EC56F, #114D06);
+  background: -moz-linear-gradient(bottom right, #9EC56F, #114D06);
+  background: linear-gradient(to top left, #9EC56F, #114D06) no-repeat center center fixed;
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;

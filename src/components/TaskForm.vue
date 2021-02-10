@@ -18,15 +18,17 @@ export default {
 <style lang="css" scoped>
 button {
   background-color:#147527;
-  border-radius: 0 5px 5px 0;
-  color: #fff;
+  border-radius: 5px;
+  color: #bad63c;
+  font-weight: bold;
 }
 form {
-  background-color: #96a399;
+  background-color:#a2c2e8;
   padding: 10px 10px;
 }
 input {
   display: inline-block;
   width: 550px;
+  margin-bottom: 10px;
 }
 </style>

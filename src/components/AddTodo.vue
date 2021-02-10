@@ -1,12 +1,9 @@
 <template>
   <p>
-  <button @click="addNewTasksList" class="addTodo">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
+  <button @click="addNewTasksList" class="glow-on-hover">
+    <font-awesome-icon icon="plus"/>
     {{text}}
-  </button>
+    </button>
   </p>
 </template>
 
@@ -32,115 +29,66 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-  button{
-      margin-top: 25px;
-      width:200px;
-      height:70px;
-      background-image: linear-gradient(to bottom, #323777, #404b8c, #4f5fa1, #5f74b6, #6f8acb, #6d9cdb, #6aadeb, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
-      border-style: none;
-      border-radius: 10px;
-      color: #fcdb03;
-      font-size: 23px;
-      letter-spacing: 3px;
-      font-family: 'Lato';
-      font-weight: 600;
-      outline: none;
-      cursor: pointer;
-      position: relative;
-      padding: 0px;
-      overflow: hidden;
-      transition: all .5s;
-      box-shadow: 0px 1px 2px rgba(0,0,0,.2);
-  }
-  button span{
-      position: absolute;
-      display: block;
-  }
-  button span:nth-child(1){
-      height: 3px;
-      width:200px;
-      top:0px;
-      left:-200px;
-      background: linear-gradient(to right, rgba(0,0,0,0), #f6e58d);
-      border-top-right-radius: 1px;
-      border-bottom-right-radius: 1px;
-      animation: span1 2s linear infinite;
-      animation-delay: 1s;
-  }
+.glow-on-hover {
+margin-top: 15px;
+width: 220px;
+height: 50px;
+border: none;
+outline: none;
+color: #fffb00;
+font-size: 18px;
+font-weight: bold;
+background: #9EC56F;
+cursor: pointer;
+position: relative;
+z-index: 0;
+border-radius: 10px;
+}
 
-  @keyframes span1{
-      0%{
-          left:-200px
-      }
-      100%{
-          left:200px;
-      }
-  }
-  button span:nth-child(2){
-      height: 70px;
-      width: 3px;
-      top:-70px;
-      right:0px;
-      background: linear-gradient(to bottom, rgba(0,0,0,0), #f6e58d);
-      border-bottom-left-radius: 1px;
-      border-bottom-right-radius: 1px;
-      animation: span2 2s linear infinite;
-      animation-delay: 2s;
-  }
-  @keyframes span2{
-      0%{
-          top:-70px;
-      }
-      100%{
-          top:70px;
-      }
-  }
-  button span:nth-child(3){
-      height:3px;
-      width:200px;
-      right:-200px;
-      bottom: 0px;
-      background: linear-gradient(to left, rgba(0,0,0,0), #f6e58d);
-      border-top-left-radius: 1px;
-      border-bottom-left-radius: 1px;
-      animation: span3 2s linear infinite;
-      animation-delay: 3s;
-  }
-  @keyframes span3{
-      0%{
-          right:-200px;
-      }
-      100%{
-          right: 200px;
-      }
-  }
+.glow-on-hover:before {
+content: '';
+background: linear-gradient(45deg, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+position: absolute;
+top: -2px;
+left:-2px;
+background-size: 400%;
+z-index: -1;
+filter: blur(5px);
+width: calc(100% + 4px);
+height: calc(100% + 4px);
+animation: glowing 20s linear infinite;
+opacity: 0;
+transition: opacity .3s ease-in-out;
+border-radius: 10px;
+}
 
-  button span:nth-child(4){
-      height:70px;
-      width:3px;
-      bottom:-70px;
-      left:0px;
-      background: linear-gradient(to top, rgba(0,0,0,0), #f6e58d);
-      border-top-right-radius: 1px;
-      border-top-left-radius: 1px;
-      animation: span4 2s linear infinite;
-      animation-delay: 4s;
-  }
-  @keyframes span4{
-      0%{
-          bottom: -70px;
-      }
-      100%{
-          bottom:70px;
-      }
-  }
+.glow-on-hover:active {
+color: #000
+}
 
-  button:hover {
-      transition: all .5s;
-      transform: rotate(-3deg) scale(1.1);
-      box-shadow: 0px 3px 5px rgba(0,0,0,.4);
-  }
-  button:hover span {
-      animation-play-state: paused;
-  }
+.glow-on-hover:active:after {
+background: transparent;
+}
+
+.glow-on-hover:hover:before {
+opacity: 1;
+}
+
+.glow-on-hover:after {
+z-index: -1;
+content: '';
+position: absolute;
+width: 100%;
+height: 100%;
+background: #2E8B57;
+left: 0;
+top: 0;
+border-radius: 10px;
+}
+
+@keyframes glowing {
+0% { background-position: 0 0; }
+50% { background-position: 400% 0; }
+100% { background-position: 0 0; }
+}
 </style>
